@@ -1,0 +1,22 @@
+# This package only exists to avoid circular dependencies during cargo publish:
+# put-runtime -> put-address-program-runtime -> put-program-test -> put-runtime
+
+[package]
+name = "put-address-lookup-table-program-tests"
+publish = false
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dev-dependencies]
+assert_matches = { workspace = true }
+bincode = { workspace = true }
+put-address-lookup-table-program = { workspace = true }
+put-program-test = { workspace = true }
+put-sdk = { workspace = true }
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

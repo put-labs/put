@@ -1,0 +1,24 @@
+[package]
+name = "put-cargo-build-bpf"
+description = "Compile a local package and all of its dependencies using the PUT BPF SDK"
+publish = false
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+cargo_metadata = { workspace = true }
+clap = { version = "3.1.5", features = ["cargo", "env"] }
+log = { workspace = true, features = ["std"] }
+put-logger = { workspace = true }
+put-sdk = { workspace = true }
+
+[features]
+program = []
+
+[[bin]]
+name = "cargo-build-bpf"
+path = "src/main.rs"

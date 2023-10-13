@@ -1,0 +1,35 @@
+[package]
+name = "put-account-decoder"
+description = "PUT account decoder"
+documentation = "https://docs.rs/put-account-decoder"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+Inflector = { workspace = true }
+base64 = { workspace = true }
+bincode = { workspace = true }
+bs58 = { workspace = true }
+bv = { workspace = true }
+lazy_static = { workspace = true }
+serde = { workspace = true }
+serde_derive = { workspace = true }
+serde_json = { workspace = true, features = ["arbitrary_precision"] }
+put-address-lookup-table-program = { workspace = true }
+put-config-program =  { workspace = true }
+put-sdk =  { workspace = true }
+put-vote-program = { workspace = true }
+ppl-token = { workspace = true, features = ["no-entrypoint"] }
+ppl-nft = { workspace = true, features = ["no-entrypoint"] }
+ppl-name = { workspace = true, features = ["no-entrypoint"] }
+thiserror = { workspace = true }
+zstd = { workspace = true }
+borsh = { workspace = true }
+chrono = { workspace = true }
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

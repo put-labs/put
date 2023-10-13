@@ -1,0 +1,41 @@
+[package]
+name = "put-entry"
+description = "PUT Entry"
+documentation = "https://docs.rs/put-poh"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+bincode = { workspace = true }
+crossbeam-channel = { workspace = true }
+dlopen = { workspace = true }
+dlopen_derive = { workspace = true }
+lazy_static = { workspace = true }
+log = { workspace = true }
+rand = { workspace = true }
+rayon = { workspace = true }
+serde = { workspace = true }
+put-measure = { workspace = true }
+put-merkle-tree = { workspace = true }
+put-metrics = { workspace = true }
+put-perf = { workspace = true }
+put-rayon-threadlimit = { workspace = true }
+put-sdk = { workspace = true }
+
+[dev-dependencies]
+matches = { workspace = true }
+put-logger = { workspace = true }
+
+[lib]
+crate-type = ["lib"]
+name = "put_entry"
+
+[[bench]]
+name = "entry_sigverify"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

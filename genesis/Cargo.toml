@@ -1,0 +1,40 @@
+[package]
+name = "put-genesis"
+description = "Blockchain, Rebuilt for Scale"
+documentation = "https://docs.rs/put-genesis"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+base64 = { workspace = true }
+bincode = { workspace = true }
+clap = { workspace = true }
+itertools = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true, features = ["arbitrary_precision"]  }
+serde_yaml = { workspace = true }
+put-clap-utils = { workspace = true }
+put-cli-config = { workspace = true }
+put-entry = { workspace = true }
+put-ledger = { workspace = true }
+put-logger = { workspace = true }
+put-runtime = { workspace = true }
+put-sdk = { workspace = true }
+put-stake-program = { workspace = true }
+put-version = { workspace = true }
+put-vote-program = { workspace = true }
+tempfile = { workspace = true }
+
+[[bin]]
+name = "put-genesis"
+path = "src/main.rs"
+
+[lib]
+name = "put_genesis"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

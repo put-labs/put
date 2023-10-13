@@ -1,0 +1,46 @@
+[package]
+name = "put-local-cluster"
+description = "Blockchain, Rebuilt for Scale"
+documentation = "https://docs.rs/put-local-cluster"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+crossbeam-channel = { workspace = true }
+itertools = { workspace = true }
+log = { workspace = true }
+rand = { workspace = true }
+rayon = { workspace = true }
+put-client = { workspace = true }
+put-config-program = { workspace = true }
+put-core = { workspace = true }
+put-entry = { workspace = true }
+put-gossip = { workspace = true }
+put-ledger = { workspace = true }
+put-pubsub-client = { workspace = true }
+put-rpc-client = { workspace = true }
+put-rpc-client-api = { workspace = true }
+put-runtime = { workspace = true }
+put-sdk = { workspace = true }
+put-stake-program = { workspace = true }
+put-streamer = { workspace = true }
+put-thin-client = { workspace = true }
+put-tpu-client = { workspace = true }
+put-vote-program = { workspace = true }
+tempfile = { workspace = true }
+trees = { workspace = true }
+
+[dev-dependencies]
+assert_matches = { workspace = true }
+fs_extra = { workspace = true }
+gag = { workspace = true }
+serial_test = { workspace = true }
+put-download-utils = { workspace = true }
+put-logger = { workspace = true }
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

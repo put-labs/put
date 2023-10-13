@@ -1,0 +1,40 @@
+[package]
+name = "put-client-test"
+description = "PUT RPC Test"
+documentation = "https://docs.rs/put-client-test"
+publish = false
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+futures-util = { workspace = true }
+serde_json = { workspace = true, features = ["arbitrary_precision"] }
+put-ledger = { workspace = true }
+put-measure = { workspace = true }
+put-merkle-tree = { workspace = true }
+put-metrics = { workspace = true }
+put-perf = { workspace = true }
+put-pubsub-client = { workspace = true }
+put-rayon-threadlimit = { workspace = true }
+put-rpc = { workspace = true }
+put-rpc-client = { workspace = true }
+put-rpc-client-api = { workspace = true }
+put-runtime = { workspace = true }
+put-sdk = { workspace = true }
+put-streamer = { workspace = true }
+put-test-validator = { workspace = true }
+put-transaction-status = { workspace = true }
+put-version = { workspace = true }
+systemstat = { workspace = true }
+tokio = { workspace = true, features = ["full"] }
+tungstenite = { workspace = true, features = ["rustls-tls-webpki-roots"] }
+
+[dev-dependencies]
+put-logger = { workspace = true }
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

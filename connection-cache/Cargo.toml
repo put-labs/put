@@ -1,0 +1,31 @@
+[package]
+name = "put-connection-cache"
+description = "Put Connection Cache"
+documentation = "https://docs.rs/put-connection-cache"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+async-trait = { workspace = true }
+bincode = { workspace = true }
+futures-util = { workspace = true }
+indexmap = { workspace = true }
+indicatif = { workspace = true, optional = true }
+log = { workspace = true }
+rand = { workspace = true }
+rayon = { workspace = true }
+rcgen = { workspace = true }
+put-measure = { workspace = true }
+put-metrics = { workspace = true }
+put-sdk = { workspace = true }
+thiserror = { workspace = true }
+tokio = { workspace = true, features = ["full"] }
+
+[dev-dependencies]
+rand_chacha = { workspace = true }
+put-logger = { workspace = true }
+put-net-utils = { workspace = true }

@@ -1,0 +1,93 @@
+[package]
+name = "put-ledger"
+description = "PUT ledger"
+documentation = "https://docs.rs/put-ledger"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+assert_matches = { workspace = true }
+bincode = { workspace = true }
+bitflags = { workspace = true }
+byteorder = { workspace = true }
+chrono = { workspace = true, features = ["default", "serde"] }
+chrono-humanize = { workspace = true }
+crossbeam-channel = { workspace = true }
+dashmap = { workspace = true, features = ["rayon", "raw-api"] }
+fs_extra = { workspace = true }
+futures = { workspace = true }
+itertools = { workspace = true }
+lazy_static = { workspace = true }
+libc = { workspace = true }
+log = { workspace = true }
+lru = { workspace = true }
+num_cpus = { workspace = true }
+num_enum = { workspace = true }
+prost = { workspace = true }
+rand = { workspace = true }
+rand_chacha = { workspace = true }
+rayon = { workspace = true }
+reed-solomon-erasure = { workspace = true, features = ["simd-accel"] }
+scopeguard = { workspace = true }
+serde = { workspace = true }
+serde_bytes = { workspace = true }
+sha2 = { workspace = true }
+put-account-decoder = { workspace = true }
+put-bpf-loader-program = { workspace = true }
+put-entry = { workspace = true }
+put-frozen-abi = { workspace = true }
+put-frozen-abi-macro = { workspace = true }
+put-measure = { workspace = true }
+put-metrics = { workspace = true }
+put-perf = { workspace = true }
+put-program-runtime = { workspace = true }
+put-rayon-threadlimit = { workspace = true }
+put-runtime = { workspace = true }
+put-sdk = { workspace = true }
+put-stake-program = { workspace = true }
+put-storage-bigtable = { workspace = true }
+put-storage-hbase = { workspace = true }
+put-storage-proto = { workspace = true }
+put-transaction-status = { workspace = true }
+put-vote-program = { workspace = true }
+ppl-token = { workspace = true, features = ["no-entrypoint"] }
+static_assertions = { workspace = true }
+tempfile = { workspace = true }
+thiserror = { workspace = true }
+tokio = { workspace = true, features = ["full"] }
+tokio-stream = { workspace = true }
+trees = { workspace = true }
+
+[dependencies.rocksdb]
+# Avoid the vendored bzip2 within rocksdb-sys that can cause linker conflicts
+# when also using the bzip2 crate
+version = "0.21.0"
+default-features = false
+features = ["lz4"]
+
+[dev-dependencies]
+bs58 = { workspace = true }
+matches = { workspace = true }
+put-account-decoder = { workspace = true }
+put-logger = { workspace = true }
+test-case = { workspace = true }
+
+[build-dependencies]
+rustc_version = { workspace = true }
+
+[lib]
+crate-type = ["lib"]
+name = "put_ledger"
+
+[[bench]]
+name = "sigverify_shreds"
+
+[[bench]]
+name = "blockstore"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

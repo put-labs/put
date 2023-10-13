@@ -1,0 +1,40 @@
+[package]
+name = "put-tokens"
+description = "Blockchain, Rebuilt for Scale"
+documentation = "https://docs.rs/put-tokens"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+chrono = { workspace = true, features = ["default", "serde"] }
+clap = "2.33.0"
+console = { workspace = true }
+csv = { workspace = true }
+ctrlc = { workspace = true, features = ["termination"] }
+indexmap = { workspace = true }
+indicatif = { workspace = true }
+pickledb = { workspace = true, features = ["yaml"] }
+serde = { workspace = true, features = ["derive"] }
+put-account-decoder = { workspace = true }
+put-clap-utils = { workspace = true }
+put-cli-config = { workspace = true }
+put-remote-wallet = { workspace = true, features = ["default"] }
+put-rpc-client = { workspace = true, features = ["default"] }
+put-rpc-client-api = { workspace = true }
+put-sdk = { workspace = true }
+put-transaction-status = { workspace = true }
+put-version = { workspace = true }
+ppl-associated-token-account = { workspace = true, features = ["no-entrypoint"] }
+ppl-token = { workspace = true, features = ["no-entrypoint"] }
+tempfile = { workspace = true }
+thiserror = { workspace = true }
+
+[dev-dependencies]
+bincode = { workspace = true }
+put-logger = { workspace = true }
+put-streamer = { workspace = true }
+put-test-validator = { workspace = true }

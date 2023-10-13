@@ -1,0 +1,39 @@
+[package]
+name = "put-transaction-status"
+description = "put transaction status types"
+documentation = "https://docs.rs/put-transaction-status"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+Inflector = { workspace = true }
+base64 = { workspace = true }
+bincode = { workspace = true }
+borsh = { workspace = true }
+bs58 = { workspace = true }
+lazy_static = { workspace = true }
+log = { workspace = true }
+serde = { workspace = true }
+serde_derive = { workspace = true }
+serde_json = { workspace = true, features = ["arbitrary_precision"] }
+thiserror = { workspace = true }
+put-account-decoder = { workspace = true }
+put-address-lookup-table-program = { workspace = true }
+put-sdk = { workspace = true }
+put-measure = { workspace = true }
+put-metrics = { workspace = true }
+put-runtime = { workspace = true }
+put-vote-program = { workspace = true }
+ppl-associated-token-account = { workspace = true }
+ppl-memo = { workspace = true }
+ppl-token = { workspace = true }
+ppl-nft = { workspace = true }
+ppl-name = { workspace = true }
+
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

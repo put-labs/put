@@ -1,0 +1,41 @@
+[package]
+name = "put-tpu-client"
+description = "Put TPU Client"
+documentation = "https://docs.rs/put-tpu-client"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+async-trait = { workspace = true }
+bincode = { workspace = true }
+futures-util = { workspace = true }
+indexmap = { workspace = true }
+indicatif = { workspace = true, optional = true }
+log = { workspace = true }
+rand = { workspace = true }
+rayon = { workspace = true }
+put-connection-cache = { workspace = true }
+put-measure = { workspace = true }
+put-metrics = { workspace = true }
+put-pubsub-client = { workspace = true }
+put-rpc-client = { workspace = true }
+put-rpc-client-api = { workspace = true }
+put-sdk = { workspace = true }
+thiserror = { workspace = true }
+tokio = { workspace = true, features = ["full"] }
+
+[dev-dependencies]
+rand_chacha = { workspace = true }
+
+[features]
+default = ["spinner"]
+# Support tpu-client methods that feature a spinner progress bar for
+# command-line interfaces
+spinner = ["dep:indicatif", "put-rpc-client/spinner"]
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

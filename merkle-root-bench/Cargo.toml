@@ -1,0 +1,21 @@
+[package]
+name = "put-merkle-root-bench"
+publish = false
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+clap = { workspace = true }
+log = { workspace = true }
+put-logger = { workspace = true }
+put-measure = { workspace = true }
+put-runtime = { workspace = true }
+put-sdk = { workspace = true }
+put-version = { workspace = true }
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

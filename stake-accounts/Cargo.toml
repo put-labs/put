@@ -1,0 +1,27 @@
+[package]
+name = "put-stake-accounts"
+description = "Blockchain, Rebuilt for Scale"
+documentation = "https://docs.rs/put-stake-accounts"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+clap = { workspace = true }
+put-clap-utils = { workspace = true }
+put-cli-config = { workspace = true }
+put-remote-wallet = { workspace = true, features = ["default"] }
+put-rpc-client = { workspace = true, features = ["default"] }
+put-rpc-client-api = { workspace = true }
+put-sdk = { workspace = true }
+put-stake-program = { workspace = true }
+put-version = { workspace = true }
+
+[dev-dependencies]
+put-runtime = { workspace = true }
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

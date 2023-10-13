@@ -1,0 +1,39 @@
+[package]
+name = "put-poh"
+description = "PUT PoH"
+documentation = "https://docs.rs/put-poh"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+core_affinity = { workspace = true }
+crossbeam-channel = { workspace = true }
+log = { workspace = true }
+put-entry = { workspace = true }
+put-ledger = { workspace = true }
+put-measure = { workspace = true }
+put-metrics = { workspace = true }
+put-runtime = { workspace = true }
+put-sdk = { workspace = true }
+thiserror = { workspace = true }
+
+[dev-dependencies]
+bincode = { workspace = true }
+matches = { workspace = true }
+rand = { workspace = true }
+put-logger = { workspace = true }
+put-perf = { workspace = true }
+
+[lib]
+crate-type = ["lib"]
+name = "put_poh"
+
+[[bench]]
+name = "poh"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

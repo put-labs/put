@@ -1,0 +1,29 @@
+[package]
+name = "put-system-program"
+description = "Put System program"
+documentation = "https://docs.rs/put-system-program"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+bincode = { workspace = true }
+log = { workspace = true }
+serde = { workspace = true }
+serde_derive = { workspace = true }
+put-program-runtime = { workspace = true }
+put-sdk = { workspace = true }
+
+[dev-dependencies]
+assert_matches = { workspace = true }
+put-logger = { workspace = true }
+
+[lib]
+crate-type = ["lib"]
+name = "put_system_program"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

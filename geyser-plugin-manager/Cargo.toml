@@ -1,0 +1,34 @@
+[package]
+name = "put-geyser-plugin-manager"
+description = "The PUT Geyser plugin manager."
+documentation = "https://docs.rs/put-geyser-plugin-manager"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+
+bs58 = { workspace = true }
+crossbeam-channel = { workspace = true }
+json5 = { workspace = true }
+jsonrpc-core = { workspace = true, features = ["arbitrary_precision"] }
+jsonrpc-server-utils = { workspace = true }
+libloading = { workspace = true }
+log = { workspace = true }
+serde_json = { workspace = true, features = ["arbitrary_precision"] }
+put-entry = { workspace = true }
+put-geyser-plugin-interface = { workspace = true }
+put-ledger = { workspace = true }
+put-measure = { workspace = true }
+put-metrics = { workspace = true }
+put-rpc = { workspace = true }
+put-runtime = { workspace = true }
+put-sdk = { workspace = true }
+put-transaction-status = { workspace = true }
+thiserror = { workspace = true }
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

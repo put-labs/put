@@ -1,0 +1,25 @@
+[package]
+name = "put-thin-client"
+description = "Put Thin Client"
+documentation = "https://docs.rs/put-thin-client"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+bincode = { workspace = true }
+log = { workspace = true }
+rayon = { workspace = true }
+put-connection-cache = { workspace = true }
+put-rpc-client = { workspace = true }
+put-rpc-client-api = { workspace = true }
+put-sdk = { workspace = true }
+
+[dev-dependencies]
+put-logger = { workspace = true }
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

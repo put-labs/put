@@ -1,0 +1,25 @@
+[package]
+name = "put-poh-bench"
+documentation = "https://docs.rs/put-poh-bench"
+publish = false
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+clap = { version = "3.1.5", features = ["cargo"] }
+log = { workspace = true }
+rand = { workspace = true }
+rayon = { workspace = true }
+put-entry = { workspace = true }
+put-logger = { workspace = true }
+put-measure = { workspace = true }
+put-perf = { workspace = true }
+put-sdk = { workspace = true }
+put-version = { workspace = true }
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

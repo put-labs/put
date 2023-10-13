@@ -1,0 +1,41 @@
+[package]
+name = "put-dos"
+publish = false
+description = "Tool to send various requests to cluster in order to evaluate the effect on performance"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+bincode = { workspace = true }
+clap = { version = "3.1.5", features = ["derive", "cargo"] }
+crossbeam-channel = { workspace = true }
+itertools = { workspace = true }
+log = { workspace = true }
+rand = { workspace = true }
+serde = { workspace = true }
+put-bench-tps = { workspace = true }
+put-client = { workspace = true }
+put-core = { workspace = true }
+put-faucet = { workspace = true }
+put-gossip = { workspace = true }
+put-logger = { workspace = true }
+put-measure = { workspace = true }
+put-net-utils = { workspace = true }
+put-perf = { workspace = true }
+put-rpc = { workspace = true }
+put-rpc-client = { workspace = true }
+put-sdk = { workspace = true }
+put-streamer = { workspace = true }
+put-tpu-client = { workspace = true }
+put-version = { workspace = true }
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
+
+[dev-dependencies]
+put-local-cluster = { workspace = true }
+put-thin-client = { workspace = true }

@@ -1,0 +1,78 @@
+[package]
+name = "put-validator"
+description = "Blockchain, Rebuilt for Scale"
+documentation = "https://docs.rs/put-validator"
+default-run = "put-validator"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+chrono = { workspace = true, features = ["default", "serde"] }
+clap = { workspace = true }
+console = { workspace = true }
+core_affinity = { workspace = true }
+crossbeam-channel = { workspace = true }
+fd-lock = { workspace = true }
+indicatif = { workspace = true }
+itertools = { workspace = true }
+jsonrpc-core = { workspace = true, features = ["arbitrary_precision"] }
+jsonrpc-core-client = { workspace = true, features = ["ipc","arbitrary_precision"] }
+jsonrpc-derive = { workspace = true }
+jsonrpc-ipc-server = { workspace = true }
+jsonrpc-server-utils = { workspace = true }
+lazy_static = { workspace = true }
+libloading = { workspace = true }
+log = { workspace = true }
+num_cpus = { workspace = true }
+rand = { workspace = true }
+rayon = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true, features = ["arbitrary_precision"]  }
+serde_yaml = { workspace = true }
+put-clap-utils = { workspace = true }
+put-cli-config = { workspace = true }
+put-core = { workspace = true }
+put-download-utils = { workspace = true }
+put-entry = { workspace = true }
+put-faucet = { workspace = true }
+put-genesis-utils = { workspace = true }
+put-geyser-plugin-interface = { workspace = true }
+put-geyser-plugin-manager = { workspace = true }
+put-gossip = { workspace = true }
+put-ledger = { workspace = true }
+put-logger = { workspace = true }
+put-metrics = { workspace = true }
+put-net-utils = { workspace = true }
+put-perf = { workspace = true }
+put-poh = { workspace = true }
+put-rpc = { workspace = true }
+put-rpc-client = { workspace = true }
+put-rpc-client-api = { workspace = true }
+put-runtime = { workspace = true }
+put-sdk = { workspace = true }
+put-send-transaction-service = { workspace = true }
+put-storage-bigtable = { workspace = true }
+put-streamer = { workspace = true }
+put-test-validator = { workspace = true }
+put-tpu-client = { workspace = true }
+put-version = { workspace = true }
+put-vote-program = { workspace = true }
+symlink = { workspace = true }
+thiserror = { workspace = true }
+
+[dev-dependencies]
+put-account-decoder = { workspace = true }
+
+[target.'cfg(not(target_env = "msvc"))'.dependencies]
+jemallocator = { workspace = true }
+
+[target."cfg(unix)".dependencies]
+libc = { workspace = true }
+signal-hook = { workspace = true }
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

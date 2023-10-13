@@ -1,0 +1,64 @@
+[package]
+name = "put-ledger-tool"
+description = "Blockchain, Rebuilt for Scale"
+documentation = "https://docs.rs/put-ledger-tool"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+bs58 = { workspace = true }
+chrono = { workspace = true, features = ["default"] }
+clap = { workspace = true }
+crossbeam-channel = { workspace = true }
+csv = { workspace = true }
+dashmap = { workspace = true }
+futures = { workspace = true }
+histogram = { workspace = true }
+itertools = { workspace = true }
+log = { workspace = true }
+num_cpus = { workspace = true }
+regex = { workspace = true }
+serde = { workspace = true, features = ["derive"] }
+serde_json = { workspace = true, features = ["arbitrary_precision"] }
+put-account-decoder = { workspace = true }
+put-bpf-loader-program = { workspace = true }
+put-clap-utils = { workspace = true }
+put-cli-output = { workspace = true }
+put-core = { workspace = true }
+put-entry = { workspace = true }
+put-geyser-plugin-manager = { workspace = true }
+put-gossip = { workspace = true }
+put-ledger = { workspace = true }
+put-logger = { workspace = true }
+put-measure = { workspace = true }
+put-program-runtime = { workspace = true }
+put-rpc = { workspace = true }
+put-runtime = { workspace = true }
+put-sdk = { workspace = true }
+put-stake-program = { workspace = true }
+put-storage-bigtable = { workspace = true }
+put-storage-hbase = { workspace = true }
+put-streamer = { workspace = true }
+put-transaction-status = { workspace = true }
+put-version = { workspace = true }
+put-vote-program = { workspace = true }
+put_rbpf = { workspace = true, features = ["debugger"] }
+tokio = { workspace = true, features = ["full"] }
+ethnum = { workspace = true }
+
+[target.'cfg(not(target_env = "msvc"))'.dependencies]
+jemallocator = { workspace = true }
+
+[dev-dependencies]
+assert_cmd = { workspace = true }
+bytecount = { workspace = true }
+
+[target."cfg(unix)".dependencies]
+signal-hook = { workspace = true }
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

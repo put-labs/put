@@ -1,0 +1,18 @@
+[package]
+name = "fail"
+version = "1.1.0"
+description = "PUT SBF test program written in Rust"
+authors = ["PUT Maintainers <maintainers@put.foundation>"]
+repository = "https://github.com/put-labs/put"
+license = "Apache-2.0"
+homepage = "https://put.com/"
+edition = "2021"
+publish = false
+
+[dependencies]
+put-program = { path = "../../../../program", version = "=1.1.0" }
+
+[lib]
+crate-type = ["cdylib"]
+
+[workspace]

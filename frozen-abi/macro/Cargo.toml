@@ -1,0 +1,21 @@
+[package]
+name = "put-frozen-abi-macro"
+description = "PUT Frozen ABI Macro"
+documentation = "https://docs.rs/put-frozen-abi-macro"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[lib]
+proc-macro = true
+
+[dependencies]
+proc-macro2 = { workspace = true }
+quote = { workspace = true }
+syn = { workspace = true, features = ["full", "extra-traits", "visit-mut"] }
+
+[build-dependencies]
+rustc_version = { workspace = true }

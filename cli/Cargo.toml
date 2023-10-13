@@ -1,0 +1,67 @@
+[package]
+name = "put-cli"
+description = "Blockchain, Rebuilt for Scale"
+documentation = "https://docs.rs/put-cli"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+bincode = { workspace = true }
+bs58 = { workspace = true }
+clap = { workspace = true }
+console = { workspace = true }
+const_format = { workspace = true }
+criterion-stats = { workspace = true }
+crossbeam-channel = { workspace = true }
+ctrlc = { workspace = true, features = ["termination"] }
+hex = { workspace = true }
+humantime = { workspace = true }
+log = { workspace = true }
+num-traits = { workspace = true }
+pretty-hex = { workspace = true }
+reqwest = { workspace = true, features = ["blocking", "brotli", "deflate", "gzip", "rustls-tls", "json"] }
+semver = { workspace = true }
+serde = { workspace = true }
+serde_derive = { workspace = true }
+serde_json = { workspace = true, features = ["arbitrary_precision"] }
+put-account-decoder = { workspace = true }
+put-address-lookup-table-program = { workspace = true }
+put-bpf-loader-program = { workspace = true }
+put-clap-utils = { workspace = true }
+put-cli-config = { workspace = true }
+put-cli-output = { workspace = true }
+put-client = { workspace = true }
+put-config-program = { workspace = true }
+put-faucet = { workspace = true }
+put-logger = { workspace = true }
+put-program-runtime = { workspace = true }
+put-pubsub-client = { workspace = true }
+put-remote-wallet = { workspace = true, features = ["default"] }
+put-rpc-client = { workspace = true, features = ["default"] }
+put-rpc-client-api = { workspace = true }
+put-rpc-client-nonce-utils = { workspace = true }
+put-sdk = { workspace = true }
+put-tpu-client = { workspace = true, features = ["default"] }
+put-transaction-status = { workspace = true }
+put-version = { workspace = true }
+put-vote-program = { workspace = true }
+put_rbpf = { workspace = true }
+ppl-memo = { workspace = true, features = ["no-entrypoint"] }
+thiserror = { workspace = true }
+tiny-bip39 = { workspace = true }
+
+[dev-dependencies]
+put-streamer = { workspace = true }
+put-test-validator = { workspace = true }
+tempfile = { workspace = true }
+
+[[bin]]
+name = "put"
+path = "src/main.rs"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

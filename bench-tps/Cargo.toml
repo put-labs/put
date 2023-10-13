@@ -1,0 +1,51 @@
+[package]
+name = "put-bench-tps"
+publish = false
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+clap = { workspace = true }
+crossbeam-channel = { workspace = true }
+log = { workspace = true }
+rand = { workspace = true }
+rayon = { workspace = true }
+serde_json = { workspace = true, features = ["arbitrary_precision"] }
+serde_yaml = { workspace = true }
+put-clap-utils = { workspace = true }
+put-cli-config = { workspace = true }
+put-client = { workspace = true }
+put-connection-cache = { workspace = true }
+put-core = { workspace = true }
+put-faucet = { workspace = true }
+put-genesis = { workspace = true }
+put-gossip = { workspace = true }
+put-logger = { workspace = true }
+put-measure = { workspace = true }
+put-metrics = { workspace = true }
+put-net-utils = { workspace = true }
+put-rpc = { workspace = true }
+put-rpc-client = { workspace = true }
+put-rpc-client-api = { workspace = true }
+put-rpc-client-nonce-utils = { workspace = true }
+put-runtime = { workspace = true }
+put-sdk = { workspace = true }
+put-streamer = { workspace = true }
+put-thin-client = { workspace = true }
+put-tpu-client = { workspace = true }
+put-version = { workspace = true }
+thiserror = { workspace = true }
+ethnum = { workspace = true }
+
+[dev-dependencies]
+serial_test = { workspace = true }
+put-local-cluster = { workspace = true }
+put-test-validator = { workspace = true }
+tempfile = "3.5.0"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

@@ -1,0 +1,33 @@
+[package]
+description = "PUT Program Test Framework"
+name = "put-program-test"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+assert_matches = { workspace = true }
+async-trait = { workspace = true }
+base64 = { workspace = true }
+bincode = { workspace = true }
+chrono-humanize = { workspace = true }
+crossbeam-channel = { workspace = true }
+log = { workspace = true }
+serde = { workspace = true }
+put-banks-client = { workspace = true }
+put-banks-interface = { workspace = true }
+put-banks-server = { workspace = true }
+put-bpf-loader-program = { workspace = true }
+put-logger = { workspace = true }
+put-program-runtime = { workspace = true }
+put-runtime = { workspace = true }
+put-sdk = { workspace = true }
+put-vote-program = { workspace = true }
+thiserror = { workspace = true }
+tokio = { workspace = true, features = ["full"] }
+
+[dev-dependencies]
+put-stake-program = { workspace = true }

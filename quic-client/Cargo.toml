@@ -1,0 +1,37 @@
+[package]
+name = "put-quic-client"
+description = "Put Quic Client"
+documentation = "https://docs.rs/put-quic-client"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+async-mutex = { workspace = true }
+async-trait = { workspace = true }
+futures = { workspace = true }
+itertools = { workspace = true }
+lazy_static = { workspace = true }
+log = { workspace = true }
+quinn = { workspace = true }
+quinn-proto = { workspace = true }
+quinn-udp = { workspace = true }
+rcgen = { workspace = true }
+rustls = { workspace = true, features = ["dangerous_configuration"] }
+put-connection-cache = { workspace = true }
+put-measure = { workspace = true }
+put-metrics = { workspace = true }
+put-net-utils = { workspace = true }
+put-rpc-client-api = { workspace = true }
+put-sdk = { workspace = true }
+put-streamer = { workspace = true }
+thiserror = { workspace = true }
+tokio = { workspace = true, features = ["full"] }
+
+[dev-dependencies]
+crossbeam-channel = { workspace = true }
+put-logger = { workspace = true }
+put-perf = { workspace = true }

@@ -1,0 +1,39 @@
+[package]
+name = "put-accounts-cluster-bench"
+publish = false
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+clap = { workspace = true }
+log = { workspace = true }
+rand = { workspace = true }
+rayon = { workspace = true }
+put-account-decoder = { workspace = true }
+put-clap-utils = { workspace = true }
+put-cli-config = { workspace = true }
+put-client = { workspace = true }
+put-faucet = { workspace = true }
+put-gossip = { workspace = true }
+put-logger = { workspace = true }
+put-measure = { workspace = true }
+put-net-utils = { workspace = true }
+put-rpc-client = { workspace = true, features = ["default"] }
+put-runtime = { workspace = true }
+put-sdk = { workspace = true }
+put-streamer = { workspace = true }
+put-transaction-status = { workspace = true }
+put-version = { workspace = true }
+ppl-token = { workspace = true, features = ["no-entrypoint"] }
+
+[dev-dependencies]
+put-core = { workspace = true }
+put-local-cluster = { workspace = true }
+put-test-validator = { workspace = true }
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

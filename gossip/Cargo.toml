@@ -1,0 +1,75 @@
+[package]
+name = "put-gossip"
+description = "Blockchain, Rebuilt for Scale"
+documentation = "https://docs.rs/put-gossip"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+bincode = { workspace = true }
+bv = { workspace = true, features = ["serde"] }
+clap = { workspace = true }
+crossbeam-channel = { workspace = true }
+flate2 = { workspace = true }
+indexmap = { workspace = true, features = ["rayon"] }
+itertools = { workspace = true }
+log = { workspace = true }
+lru = { workspace = true }
+matches = { workspace = true }
+num-traits = { workspace = true }
+rand = { workspace = true }
+rand_chacha = { workspace = true }
+rayon = { workspace = true }
+serde = { workspace = true }
+serde_bytes = { workspace = true }
+serde_derive = { workspace = true }
+put-bloom = { workspace = true }
+put-clap-utils = { workspace = true }
+put-client = { workspace = true }
+put-entry = { workspace = true }
+put-frozen-abi = { workspace = true }
+put-frozen-abi-macro = { workspace = true }
+put-ledger = { workspace = true }
+put-logger = { workspace = true }
+put-measure = { workspace = true }
+put-metrics = { workspace = true }
+put-net-utils = { workspace = true }
+put-perf = { workspace = true }
+put-rayon-threadlimit = { workspace = true }
+put-runtime = { workspace = true }
+put-sdk = { workspace = true }
+put-streamer = { workspace = true }
+put-thin-client = { workspace = true }
+put-tpu-client = { workspace = true }
+put-version = { workspace = true }
+put-vote-program = { workspace = true }
+static_assertions = { workspace = true }
+thiserror = { workspace = true }
+
+[dev-dependencies]
+num_cpus = { workspace = true }
+regex = { workspace = true }
+serial_test = { workspace = true }
+
+[build-dependencies]
+rustc_version = { workspace = true }
+
+[[bench]]
+name = "crds"
+
+[[bench]]
+name = "crds_gossip_pull"
+
+[[bench]]
+name = "crds_shards"
+
+[[bin]]
+name = "put-gossip"
+path = "src/main.rs"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

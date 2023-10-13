@@ -1,0 +1,44 @@
+[package]
+name = "put-client"
+description = "Put Client"
+documentation = "https://docs.rs/put-client"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+async-trait = { workspace = true }
+bincode = { workspace = true }
+futures = { workspace = true }
+futures-util = { workspace = true }
+indexmap = { workspace = true }
+indicatif = { workspace = true }
+log = { workspace = true }
+quinn = { workspace = true }
+rand = { workspace = true }
+rayon = { workspace = true }
+put-connection-cache = { workspace = true }
+put-measure = { workspace = true }
+put-metrics = { workspace = true }
+put-pubsub-client = { workspace = true }
+put-quic-client = { workspace = true }
+put-rpc-client = { workspace = true, features = ["default"] }
+put-rpc-client-api = { workspace = true }
+put-rpc-client-nonce-utils = { workspace = true }
+put-sdk = { workspace = true }
+put-streamer = { workspace = true }
+put-thin-client = { workspace = true }
+put-tpu-client = { workspace = true, features = ["default"] }
+put-udp-client = { workspace = true }
+thiserror = { workspace = true }
+tokio = { workspace = true, features = ["full"] }
+
+[dev-dependencies]
+crossbeam-channel = { workspace = true }
+rand_chacha = { workspace = true }
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

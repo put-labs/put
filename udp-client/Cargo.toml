@@ -1,0 +1,19 @@
+[package]
+name = "put-udp-client"
+description = "Put UDP Client"
+documentation = "https://docs.rs/put-udp-client"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+async-trait = { workspace = true }
+put-connection-cache = { workspace = true }
+put-net-utils = { workspace = true }
+put-sdk = { workspace = true }
+put-streamer = { workspace = true }
+thiserror = { workspace = true }
+tokio = { workspace = true, features = ["full"] }

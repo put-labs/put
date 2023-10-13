@@ -1,0 +1,74 @@
+[package]
+name = "put-rpc"
+description = "PUT RPC"
+documentation = "https://docs.rs/put-rpc"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+base64 = { workspace = true }
+bincode = { workspace = true }
+bs58 = { workspace = true }
+crossbeam-channel = { workspace = true }
+dashmap = { workspace = true }
+itertools = { workspace = true }
+jsonrpc-core =  { workspace = true, features = ["arbitrary_precision"] }
+jsonrpc-core-client = { workspace = true, features = ["arbitrary_precision"]  }
+jsonrpc-derive = { workspace = true }
+jsonrpc-http-server = { workspace = true }
+jsonrpc-pubsub = { workspace = true }
+libc = { workspace = true }
+log = { workspace = true }
+rayon = { workspace = true }
+regex = { workspace = true }
+serde = { workspace = true }
+serde_derive = { workspace = true }
+serde_json = { workspace = true, features = ["arbitrary_precision"] }
+soketto = { workspace = true }
+put-account-decoder = { workspace = true }
+put-client = { workspace = true }
+put-entry = { workspace = true }
+put-faucet = { workspace = true }
+put-gossip = { workspace = true }
+put-ledger = { workspace = true }
+put-measure = { workspace = true }
+put-metrics = { workspace = true }
+put-perf = { workspace = true }
+put-poh = { workspace = true }
+put-rayon-threadlimit = { workspace = true }
+put-rpc-client-api = { workspace = true }
+put-runtime = { workspace = true }
+put-sdk = { workspace = true }
+put-send-transaction-service = { workspace = true }
+put-stake-program = { workspace = true }
+put-storage-bigtable = { workspace = true }
+put-storage-hbase = { workspace = true }
+put-streamer = { workspace = true }
+put-tpu-client = { workspace = true }
+put-transaction-status = { workspace = true }
+put-version = { workspace = true }
+put-vote-program = { workspace = true }
+ppl-token = { workspace = true, features = ["no-entrypoint"] }
+ppl-name = { workspace = true, features = ["no-entrypoint"] }
+stream-cancel = { workspace = true }
+thiserror = { workspace = true }
+tokio = { workspace = true, features = ["full"] }
+tokio-util = { workspace = true, features = ["codec", "compat"] }
+
+[dev-dependencies]
+serial_test = { workspace = true }
+put-address-lookup-table-program = { workspace = true }
+put-net-utils = { workspace = true }
+put-stake-program = { workspace = true }
+symlink = { workspace = true }
+
+[lib]
+crate-type = ["lib"]
+name = "put_rpc"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

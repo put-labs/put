@@ -1,0 +1,32 @@
+[package]
+name = "put-banks-client"
+description = "PUT banks client"
+documentation = "https://docs.rs/put-banks-client"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+borsh = { workspace = true }
+futures = { workspace = true }
+put-banks-interface = { workspace = true }
+put-program = { workspace = true }
+put-sdk = { workspace = true }
+tarpc = { workspace = true, features = ["full"] }
+thiserror = { workspace = true }
+tokio = { workspace = true, features = ["full"] }
+tokio-serde = { workspace = true, features = ["bincode"] }
+
+[dev-dependencies]
+put-banks-server = { workspace = true }
+put-runtime = { workspace = true }
+
+[lib]
+crate-type = ["lib"]
+name = "put_banks_client"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
